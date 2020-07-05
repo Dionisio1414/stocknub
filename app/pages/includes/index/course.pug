@@ -1,0 +1,25 @@
+section.section.course
+    .wrapper
+        .wrapper-row
+            .course-form
+                .form-container
+                    form.form(action="" method="POST")
+                        .form-body
+                            h3.form-body__title Заявка
+                            .form-body__fields
+                                input(required type="text" name="name" placeholder="Имя*")
+                                input(required type="email" name="email" placeholder="Email*")
+                                input(required type="tel" name="tel" placeholder="Телефон*")
+                                input(required type="text" name="country" placeholder="Страна*")
+                            .form-body__controls
+                                button.button(type="submit") Оставить заявку
+                                label.checkbox
+                                    input(type="checkbox" name="chx" id="chx") 
+                                    span.checkbox__text Согласен на обработку персональных  данных
+                        .form-footer С вами свяжутся чтобы присоединить к следующей группе курсантов
+            .course-description 
+                h2.title Записаться на онлайн 
+                    span курс смартфотографа
+                p Смарт фотографируй 
+                    span весело и с выгодой!
+

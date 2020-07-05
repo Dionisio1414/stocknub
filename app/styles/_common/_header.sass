@@ -1,0 +1,62 @@
+.header
+    position: absolute
+    font-size: .875rem
+    top: 3.8125em
+    width: 100%
+    background: set-color(text)
+    z-index: 2
+    +sm-block()
+        background-color: transparent
+        position: static
+    &-wrapper
+        +wrapper()
+        +sm-block()
+            max-width: 100%
+    &-row
+        +row-flex()
+        align-items: stretch
+    &-brand
+        +col()
+        +size(2.2)
+        +size-xl(3)
+        +size-lg(4)
+        +size-md(4.5)
+        +size-sm(12)
+        +sm-block()
+            order: 1
+        .logo
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0 1em
+            background: #fff
+            min-height: 100%
+            +sm-block()
+                max-width: 10.928571428571429em
+                margin: auto
+    &-text
+        display: flex
+        align-items: center
+        +col()
+        +size(9.8)
+        +size-xl(9)
+        +size-lg(8)
+        +size-md(7.5)
+        +size-sm(12)
+        +sm-block()
+            background: set-color(text)
+            margin: 0
+            width: 100%
+            margin-bottom: 1.6666666666666667em
+            p
+                padding: 1em 1.5333333333333334em
+        p
+            line-height: 1.2em
+            padding: 1em 0
+            color: #fff
+            +xl-block()
+                font-size: .8571428571428571em
+                line-height: 1.5em
+            +sm-block()
+                font-size: .7857142857142857em
+                line-height: 1.4545454545454546em

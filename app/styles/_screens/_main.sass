@@ -1,0 +1,79 @@
+.home
+    background-image: url(../images/static/bg-particles-1.png)//, url(../images/svg/large-home-polygon.svg)
+    background-attachment: scroll//, fixed
+    background-size: contain//, contain
+    background-position: -50px -90px//, 71em -666px
+    background-repeat: no-repeat//, no-repeat
+    padding-top: 11.5em
+    padding-bottom: 7em
+    &::before
+        content: ""
+        position: absolute
+        bottom: 4em
+        left: 0
+        z-index: -1
+        width: 100vw
+        height: 100vh
+        min-height: 100vh
+        background-image: url(../images/static/bg-screen-1.png)
+        background-repeat: no-repeat
+        background-position: bottom
+        background-size: contain
+    &::after
+        content: ""
+        position: absolute
+        right: -25%
+        bottom: -12%
+        z-index: -1
+        width: 59.792vw
+        height: 59.792vw
+        background-image: url(../images/svg/large-home-polygon.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+    &-description
+        +col()
+        +size(9)
+        .text
+            text-align: right
+            max-width: 58%
+            margin-left: auto
+            p
+                span
+                    display: inline-block
+                    width: 100%
+                &:first-child
+                    font-family: $montserratBlack
+                    font-size: 9.375rem
+                    line-height: 5rem
+                    text-align: left
+                    color: set-color(text)
+                    span
+                        font-size: 3.75rem
+                        color: set-color(accent)
+                &:nth-child(2)
+                    font-family: $montserratBlack
+                    font-size: 2.1875rem
+                    line-height: 2.5rem
+                    text-align: left
+                    text-transform: uppercase
+                &:nth-child(3)
+                    font-family: $montserratBold
+                    font-size: 2.5rem
+                    line-height: 3.75rem
+                    color: set-color(text)
+                    span
+                        font-size: 3.125rem
+                        &:first-child
+                            font-family: $montserratExtraBold
+                        &:last-child
+                            font-family: $montserratBlack
+                            color: set-color(accent)
+                &:last-child
+                    font-family: $montserratBlack
+                    font-size: 3.75rem
+                    line-height: 3rem
+                    color: set-color(accent)
+    &-form
+        +col()
+        +size(3)

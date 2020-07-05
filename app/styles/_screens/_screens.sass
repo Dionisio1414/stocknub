@@ -1,0 +1,361 @@
+.screen
+    &_first
+        padding: 9.37rem 0 15.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-2.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &::after
+            content: ""
+            position: absolute
+            left: -25%
+            top: 0
+            z-index: -1
+            width: 41.354vw
+            height: 41.354vw
+            background-image: url(../images/svg/small-polygon.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+        &__description
+            +col()
+            +size(5)
+            .title
+                font-family: $montserratBlack
+                font-size: 2.1875rem
+                line-height: 2.75rem
+                margin-bottom: 1.5625rem
+                span
+                    font-size: 3.125rem
+                    color: set-color(accent)
+            p
+                font-family: $montserratBold
+                font-size: 1.5625rem
+                line-height: 2.1875rem
+                span
+                    color: set-color(accent)
+                &:not(:last-child)
+                    margin-bottom: .875rem
+                &:last-of-type
+                    font-family: $montserratBlack
+                    font-size: 2.5rem
+                    color: set-color(accent)
+    &_second
+        padding: 0 0 13.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-3.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &::after
+            content: ""
+            position: absolute
+            right: -25%
+            top: 10%
+            z-index: -1
+            width: 41.354vw
+            height: 41.354vw
+            background-image: url(../images/svg/small-polygon.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+        &__caption
+            text-align: center
+            max-width: 75%
+            margin: 0 auto 8.3125rem auto
+            p
+                position: relative
+                font-family: $montserratBold
+                font-size: 1.5625rem
+                &:last-child
+                    color: #fff
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        width: 100%
+                        height: calc(100% + 5px)
+                        background-color: set-color(accent)
+                        z-index: -1
+                        max-width: 50%
+                        transform: translate(-50%, -50%) skew(-25deg)
+        &__description
+            +col()
+            +size(6)
+            margin-left: auto
+            p
+                line-height: normal
+                span
+                    display: block
+                &:first-child
+                    font-family: $montserratSemiBold
+                    font-size: 1.125rem
+                    margin-bottom: .625rem
+                    span
+                        font-family: $montserratBlack
+                        font-size: 1.25rem
+                        color: set-color(accent)
+                &:nth-child(2)
+                    font-family: $montserratBlack
+                    font-size: 2.5rem
+                    padding-left: 2.1875rem
+                &:nth-child(3)
+                    font-family: $montserratBlack
+                    font-size: 3.125rem
+                    text-transform: uppercase
+                    margin-bottom: .625rem
+                    color: set-color(accent)
+                    span
+                        font-family: $montserratMedium
+                        font-size: .8125rem
+                        text-transform: lowercase
+                        padding-left: 2.1875rem
+                        color: set-color(text)
+                        &::first-letter
+                          text-transform: uppercase
+                &:nth-child(4)
+                    font-family: $montserratBold  
+                    font-size: 1.5625rem
+                    padding-left: 2.1875rem
+                    span
+                        font-family: $montserratBlack
+                        font-size: 2.1875rem
+                        margin-left: -2.1875rem
+                        color: set-color(accent)
+                &:last-child
+                    font-family: $montserratBold
+                    font-size: .875rem
+                    padding-left: 2.1875rem
+    &_third
+        padding: 9.37rem 0 9.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-4.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &::after
+            content: ""
+            position: absolute
+            left: -30%
+            top: 34%
+            z-index: -1
+            width: 41.354vw
+            height: 41.354vw
+            background-image: url(../images/svg/small-polygon.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+        &__description
+            +col()
+            +size(7)
+            .title
+                position: relative
+                font-family: $montserratBlack
+                font-size: 5rem
+                line-height: normal
+                margin-bottom: 1.375rem
+                &::before
+                    content: attr(data-title)
+                    position: absolute
+                    bottom: 0
+                    right: -3rem
+                    font-size: 12.5rem
+                    color: rgba(145,145,160, .10)
+                span
+                    color: set-color(accent)
+            ul
+                margin-bottom: 1.5625rem
+            p
+                &:first-of-type
+                    font-family: $montserratSemiBold
+                    font-size: 1.25rem
+                    line-height: 1.875rem
+                    margin-bottom: 1.0625rem
+                &:last-of-type
+                    font-family: $montserratMedium
+                    font-size: .875rem
+                    line-height: 1.5rem
+    &_four
+        padding: 7.37rem 0 9.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-5.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &::after
+            content: ""
+            position: absolute
+            right: -30%
+            top: 28%
+            z-index: -1
+            width: 41.354vw
+            height: 41.354vw
+            background-image: url(../images/svg/small-polygon.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+        &__description
+            +col()
+            +size(7)
+            margin-left: auto
+            .title
+                font-family: $montserratBlack
+                font-size: 5.625rem
+                color: set-color(accent)
+            .decoration-desc
+                margin-left: 3.25rem
+                margin-bottom: 1.4375rem
+                strong
+                    font-family: $montserratBold
+                    line-height: 1.625rem
+                    border-bottom: 2px solid set-color(decoration-color)
+            p
+                &:first-of-type
+                    font-family: $montserratBold
+                    font-size: 1.625rem
+                    line-height: 1
+                    margin-bottom: 2.3125rem
+                &:last-of-type
+                    font-family: $montserratMedium
+                    font-size: .875rem
+                    line-height: 1.5rem
+    &_five
+        padding: 9.37rem 0 9.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-6.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &::after
+            content: ""
+            position: absolute
+            left: -25%
+            top: 15%
+            z-index: -1
+            width: 41.354vw
+            height: 41.354vw
+            background-image: url(../images/svg/small-polygon.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+        &__description
+            +col()
+            +size(5.65)
+            .title
+                font-family: $montserratBlack
+                font-size: 4.375rem
+                margin-bottom: 1rem
+                color: set-color(accent)
+            .subdesc
+                padding-left: 2.5rem
+                margin-bottom: 1.5rem
+                p
+                    font-family: $montserratMedium
+                    font-size: 1.25rem
+                    line-height: 1.625rem
+                    &:not(:last-of-type)
+                        margin-bottom: 1.5625rem
+                    &:last-of-type
+                        font-size: 1rem
+                span
+                    display: block
+                    font-family: $montserratBold
+                    font-size: 1.25rem
+                    margin-bottom: 1.5625rem
+            .desc
+                font-family: $montserratBlack
+                p
+                    font-size: 2.8125rem
+                    line-height: normal
+                    color: set-color(accent)
+                    span
+                        display: block
+                        font-size: 1.875rem 
+                        color: set-color(text)
+    &_six
+        padding: 9.37rem 0 9.37rem 0
+        &::before
+            content: ""
+            position: absolute
+            bottom: 4em
+            left: 0
+            z-index: -1
+            width: 100vw
+            height: 100vh
+            min-height: 100vh
+            background-image: url(../images/static/bg-screen-7.png)
+            background-repeat: no-repeat
+            background-position: bottom
+            background-size: contain
+        &__description
+            +col()
+            +size(7)
+            margin-left: auto
+            .title
+                font-family: $montserratBlack
+                font-size: 1.875rem
+                line-height: normal
+                margin-bottom: 1.5625rem
+                span
+                    font-size: 2.5rem
+            .frame-link
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                background-image: url(../images/static/frame-border.png)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                min-height: 300px
+                width: 100%
+                margin-bottom: 2.5rem
+                .frame-icon
+                    position: absolute
+                    z-index: 2
+            p
+                font-family: $montserratMedium
+                line-height: 1.625rem
+                    

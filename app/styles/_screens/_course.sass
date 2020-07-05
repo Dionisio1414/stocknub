@@ -1,0 +1,41 @@
+.course
+    padding: 4.37rem 0 9.37rem 0
+    &::before
+        content: ""
+        position: absolute
+        bottom: 4em
+        left: 0
+        z-index: -1
+        width: 100vw
+        height: 100vh
+        min-height: 100vh
+        background-image: url(../images/static/bg-screen-8.png)
+        background-repeat: no-repeat
+        background-position: bottom
+        background-size: contain
+    &-form
+        +col()
+        +size(3)
+    &-description
+        +col()
+        +size(9)
+        .title
+            font-family: $montserratBold
+            font-size: 2.1875rem
+            line-height: normal
+            margin-bottom: 1.625rem
+            span
+                display: block
+                font-family: $montserratBlack
+                font-size: 2.8125rem
+                color: set-color(accent)
+        p
+            font-family: $montserratBold
+            font-size: 1.5625rem
+            padding-left: 2.1875rem
+            line-height: normal
+            span
+                display: block
+                font-family: $montserratBlack
+                font-size: 1.875rem
+                color: set-color(accent)

@@ -1,0 +1,104 @@
+input
+    font-family: $montserratMedium
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid rgba(112,112,112, .10)
+    padding: .3125em 0
+
+.button
+    display: block
+    background-color: set-color(accent)
+    font-family: $montserratBold
+    font-size: 1.0625rem
+    letter-spacing: .5px
+    text-transform: uppercase
+    padding: 1.5625em
+    border: none
+    outline: 0
+    width: 100%
+    border-radius: 3px
+    color: #fff
+    cursor: pointer
+
+.checkbox
+    position: relative
+    cursor: pointer
+    input
+        position: absolute
+        z-index: -1
+        opacity: 0
+        &:checked
+            + 
+                .checkbox__text
+                    color: set-color(accent)
+                    &::after
+                        opacity: 1
+                    &::before
+                        opacity: 0
+    &__text
+        position: relative
+        display: block
+        font-family: $montserratSemiBold
+        font-size: .6875rem
+        padding-left: 1.6rem
+        line-height: .875rem
+        color: set-color(dark)
+        transition: color .2s ease-in-out
+        &:hover
+            color: set-color(accent)
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            width: 11px
+            height: 11px
+            border: 2px solid set-color(accent)
+            border-radius: 2px
+            opacity: 1
+            transition: opacity .2s ease-in-out
+        &::after
+            content: ""
+            opacity: 0
+            background-image: url(../images/svg/checkbox.svg)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            position: absolute
+            left: 0
+            top: 0
+            width: 14px
+            height: 14px
+            transition: opacity .2s ease-in-out
+
+
+.form-container
+    position: relative
+    background: #fff
+    border-radius: 7px
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, .10)
+    .form
+        &-body
+            padding: 3.125rem 3.0375rem 2.8125rem 3.0375rem
+            &__title
+                font-family: $montserratBold
+                font-size: 2.5625rem
+                line-height: 2.4375rem
+                margin: 0 0 1.5625rem 0
+            &__fields
+                display: flex
+                flex-direction: column
+                margin-bottom: 1.6875rem
+                input
+                    width: 100%
+                    &:not(:last-child)
+                        margin-bottom: 1.5625rem
+            &__controls
+                .button
+                    margin-bottom: .9375rem
+        &-footer
+            font-family: $montserratMedium
+            font-size: .625rem
+            text-align: center
+            padding: .9375rem 2.1875rem .825rem 2.1875rem
+            border-top: 1px solid rgba(112,112,112, .1)
+            color: set-color(grays)
