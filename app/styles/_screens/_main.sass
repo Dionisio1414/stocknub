@@ -6,6 +6,14 @@
     background-repeat: no-repeat//, no-repeat
     padding-top: 11.5em
     padding-bottom: 7em
+    +xl-block()
+        background-size: 80%
+        background-position: -34px -47px
+    +sm-block()
+        padding-top: 2.5em
+        padding-bottom: 17em
+        background-size: 100%
+        background-position: center
     &::before
         content: ""
         position: absolute
@@ -31,13 +39,40 @@
         background-repeat: no-repeat
         background-size: cover
         background-position: center center
+        +large-block()
+            bottom: -1%
+            right: -35%
+            width: 62.792vw
+            height: 73.792vw
+        +xl-block()
+            bottom: 0%
+            right: -32%
+        +lg-block()
+            bottom: 25%
+            right: -56%
+            width: 71.792vw
+            height: 82.792vw
+        +md-block()
+            display: none
     &-description
         +col()
         +size(9)
+        +size-large(8.5)
+        +size-lg(7.5)
+        +size-md(12)
+        +large-block()
         .text
             text-align: right
             max-width: 58%
             margin-left: auto
+            +large-block()
+                max-width: 60%
+            +medium_desktop-block()
+                max-width: 75%
+            +xl-block()
+                max-width: 100%
+            +sm-block()
+                text-align: center
             p
                 span
                     display: inline-block
@@ -48,6 +83,19 @@
                     line-height: 5rem
                     text-align: left
                     color: set-color(text)
+                    +large-block()
+                        font-size: 8.125em
+                        span
+                            font-size: 3.25rem
+                    +xl-block()
+                        text-align: right
+                    +lg-block()
+                        font-size: 4.375rem
+                        line-height: 2.8125rem
+                        span
+                            font-size: 1.875rem
+                    +sm-block()
+                        text-align: center
                     span
                         font-size: 3.75rem
                         color: set-color(accent)
@@ -57,23 +105,51 @@
                     line-height: 2.5rem
                     text-align: left
                     text-transform: uppercase
+                    +large-block()
+                        font-size: 1.875rem
+                    +xl-block()
+                        text-align: right
+                    +lg-block()
+                        font-size: 1.5rem
+                    +sm-block()
+                        text-align: center
                 &:nth-child(3)
                     font-family: $montserratBold
                     font-size: 2.5rem
                     line-height: 3.75rem
                     color: set-color(text)
+                    +large-block()
+                        font-size: 2.125rem
+                        line-height: 3.25rem
+                    +lg-block()
+                        font-size: 1.125rem
+                        line-height: 2.0625rem
                     span
                         font-size: 3.125rem
+                        +large-block()
+                            font-size: 2.6875rem
+                        +lg-block()
+                            font-size: 1.375rem
                         &:first-child
                             font-family: $montserratExtraBold
                         &:last-child
                             font-family: $montserratBlack
                             color: set-color(accent)
+                            +lg-block()
+                                font-size: 1.5rem
                 &:last-child
                     font-family: $montserratBlack
                     font-size: 3.75rem
                     line-height: 3rem
                     color: set-color(accent)
+                    +large-block()
+                        font-size: 3.25rem
+                    +lg-block()
+                        font-size: 1.8125rem
+                        line-height: 1.35rem
     &-form
         +col()
         +size(3)
+        +size-large(3.5)
+        +size-lg(4.5)
+        +size-md(12)

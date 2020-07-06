@@ -28,7 +28,8 @@
             background-position: center center
         &__description
             +col()
-            +size(5)
+            +size(6)
+            padding-left: 7rem
             .title
                 font-family: $montserratBlack
                 font-size: 2.1875rem
@@ -348,12 +349,17 @@
                 background-image: url(../images/static/frame-border.png)
                 background-repeat: no-repeat
                 background-position: center
-                background-size: contain
-                min-height: 300px
+                background-size: 100% 100%
+                min-height: 350px
+                padding: 1.3125em 3.8125em
                 width: 100%
                 margin-bottom: 2.5rem
+                .frame-image
+                    width: 100%
                 .frame-icon
                     position: absolute
+                    bottom: -65px
+                    right: -25px
                     z-index: 2
             p
                 font-family: $montserratMedium

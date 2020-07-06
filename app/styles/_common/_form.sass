@@ -79,11 +79,15 @@ input
     .form
         &-body
             padding: 3.125rem 3.0375rem 2.8125rem 3.0375rem
+            +xl-block()
+                padding: 1.5rem 1.75rem 1.8125rem 1.75rem
             &__title
                 font-family: $montserratBold
                 font-size: 2.5625rem
                 line-height: 2.4375rem
                 margin: 0 0 1.5625rem 0
+                +xl-block()
+                    font-size: 1.875rem
             &__fields
                 display: flex
                 flex-direction: column
@@ -95,6 +99,8 @@ input
             &__controls
                 .button
                     margin-bottom: .9375rem
+                    +xl-block()
+                        font-size: .8125rem
         &-footer
             font-family: $montserratMedium
             font-size: .625rem
@@ -102,3 +108,6 @@ input
             padding: .9375rem 2.1875rem .825rem 2.1875rem
             border-top: 1px solid rgba(112,112,112, .1)
             color: set-color(grays)
+            +xl-block()
+                font-size: .5625rem
+                padding: .9375rem 1.1875rem .825rem 1.1875rem

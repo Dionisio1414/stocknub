@@ -25,8 +25,17 @@ module.exports = function grid(done) {
             lg: {
                 width: "992px"
             },
+            small_laptop: {
+                width: "970px"
+            },
             xl: {
                 width: "1200px"
+            },
+            small_desktop: {
+                width: "1366px"
+            },
+            medium_desktop: {
+                width: "1440px"
             },
             large: {
                 width: "1560px"
