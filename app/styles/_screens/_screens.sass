@@ -1,12 +1,33 @@
 .screen
     &_first
+        background-image: url(../images/static/bg-particles-2.png)
+        background-size: 50% 80%
+        background-position: right top
+        background-repeat: no-repeat
         padding: 9.37rem 0 15.37rem 0
+        margin-bottom: 3.375rem
+        +medium_desktop-block()
+            background-size: 50% 60%
+        +small_desktop-block()
+            background-size: 50% 50%
+        +xl-block()
+            background-size: 64% 53%
+        +xl-block()
+            background-size: 70% 45%
+            padding: 5.37rem 0 15.37rem 0
+        +md-block()
+            background-size: 55% 22%
+            padding: 0 0 15.37rem 0
+            .wrapper-row
+                justify-content: center
+        +sm-block()
+            padding: 0 0 9.37rem 0
         &::before
             content: ""
             position: absolute
-            bottom: 4em
+            bottom: 0
             left: 0
-            z-index: -1
+            z-index: 0
             width: 100vw
             height: 100vh
             min-height: 100vh
@@ -14,34 +35,53 @@
             background-repeat: no-repeat
             background-position: bottom
             background-size: contain
+            pointer-events: none
         &::after
             content: ""
             position: absolute
             left: -25%
             top: 0
-            z-index: -1
+            z-index: 1
             width: 41.354vw
             height: 41.354vw
             background-image: url(../images/svg/small-polygon.svg)
             background-repeat: no-repeat
             background-size: contain
             background-position: center center
+            pointer-events: none
         &__description
             +col()
             +size(6)
-            padding-left: 7rem
+            +shift-left(1.45)
+            +shift-large-left(1.5)
+            +size-xl(8)
+            +shift-md-left(0)
+            +size-md(10)
+            +size-sm(12)
             .title
                 font-family: $montserratBlack
                 font-size: 2.1875rem
                 line-height: 2.75rem
                 margin-bottom: 1.5625rem
+                +xl-block()
+                    font-size: 1.9375rem
+                +sm-block()
+                    line-height: 2.3rem
                 span
                     font-size: 3.125rem
                     color: set-color(accent)
+                    +xl-block()
+                        font-size: 2.75rem
             p
                 font-family: $montserratBold
                 font-size: 1.5625rem
                 line-height: 2.1875rem
+                +xl-block()
+                    font-size: 1.375rem
+                    line-height: 1.9375rem
+                +sm-block()
+                    font-size: 1rem
+                    line-height: 1.375rem
                 span
                     color: set-color(accent)
                 &:not(:last-child)
@@ -50,8 +90,23 @@
                     font-family: $montserratBlack
                     font-size: 2.5rem
                     color: set-color(accent)
+                    +xl-block()
+                        font-size: 1.375rem
+                    +sm-block()
+                        font-size: 1.75rem
     &_second
-        padding: 0 0 13.37rem 0
+        background-image: url(../images/static/bg-particles-3.png)
+        background-size: 100% 45%
+        background-position: right top
+        background-repeat: no-repeat
+        padding: 0 0 17.37rem 0
+        +large-block()
+            background-size: 100% 37%
+        +small_desktop-block()
+            background-size: 100% 29%
+            background-position: right center     
+        +xl-block()
+            background-position: right top  
         &::before
             content: ""
             position: absolute
@@ -77,14 +132,27 @@
             background-repeat: no-repeat
             background-size: contain
             background-position: center center
+            +large-block()
+                right: -28%
+            +xl-block()
+                right: -32%
         &__caption
             text-align: center
             max-width: 75%
             margin: 0 auto 8.3125rem auto
+            +xl-block()
+                max-width: 100%
+                margin: 0 auto 5.375rem auto
             p
                 position: relative
                 font-family: $montserratBold
                 font-size: 1.5625rem
+                +xl-block()
+                    font-size: 1.375rem
+                +md-block()
+                    font-size: 1.125rem
+                +sm-block()
+                    font-size: 1rem
                 &:last-child
                     color: #fff
                     &::before
@@ -98,10 +166,23 @@
                         z-index: -1
                         max-width: 50%
                         transform: translate(-50%, -50%) skew(-25deg)
+                        +small_desktop-block()
+                            max-width: 60%
+                        +md-block()
+                            max-width: 90%
+                        +sm-block()
+                            max-width: 100%
         &__description
             +col()
-            +size(6)
-            margin-left: auto
+            +size(6.5)
+            +size-md(12)
+            +shift-right(1.25)
+            +shift-left(5.5)
+            +shift-xl-right(.5)
+            +shift-lg-right(.1)
+            +shift-md-right(0)
+            +shift-lg-left(5.2)
+            +shift-md-left(0)
             p
                 line-height: normal
                 span
@@ -110,41 +191,72 @@
                     font-family: $montserratSemiBold
                     font-size: 1.125rem
                     margin-bottom: .625rem
+                    +xl-block()
+                        font-size: .875rem
+                    +sm-block()
+                        text-align: center
                     span
                         font-family: $montserratBlack
                         font-size: 1.25rem
                         color: set-color(accent)
+                        +xl-block()
+                            font-size: 1rem
                 &:nth-child(2)
                     font-family: $montserratBlack
                     font-size: 2.5rem
                     padding-left: 2.1875rem
+                    +xl-block()
+                        font-size: 2.0625rem
+                    +sm-block()
+                        padding-left: 0
+                        text-align: center
+                        font-size: 1.8125rem
                 &:nth-child(3)
                     font-family: $montserratBlack
                     font-size: 3.125rem
                     text-transform: uppercase
                     margin-bottom: .625rem
                     color: set-color(accent)
+                    +xl-block()
+                        font-size: 2.3125rem
+                    +sm-block()
+                        text-align: center
                     span
                         font-family: $montserratMedium
                         font-size: .8125rem
                         text-transform: lowercase
                         padding-left: 2.1875rem
                         color: set-color(text)
+                        +xl-block()
+                            font-size: .625rem
+                        +sm-block()
+                            padding-left: 0
                         &::first-letter
                           text-transform: uppercase
                 &:nth-child(4)
                     font-family: $montserratBold  
                     font-size: 1.5625rem
                     padding-left: 2.1875rem
+                    +xl-block()
+                        font-size: 1.25rem
+                    +sm-block()
+                        padding-left: 0
+                        text-align: center
                     span
                         font-family: $montserratBlack
                         font-size: 2.1875rem
                         margin-left: -2.1875rem
                         color: set-color(accent)
+                        +xl-block()
+                            font-size: 1.75rem
                 &:last-child
                     font-family: $montserratBold
                     font-size: .875rem
                     padding-left: 2.1875rem
+                    +xl-block()
+                        font-size: .6875rem
+                    +sm-block()
+                        text-align: center
     &_third
         padding: 9.37rem 0 9.37rem 0
         &::before

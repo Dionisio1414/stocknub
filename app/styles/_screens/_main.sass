@@ -96,6 +96,9 @@
                             font-size: 1.875rem
                     +sm-block()
                         text-align: center
+                        font-size: 4rem
+                        span
+                            font-size: 1.675rem
                     span
                         font-size: 3.75rem
                         color: set-color(accent)
@@ -152,4 +155,21 @@
         +size(3)
         +size-large(3.5)
         +size-lg(4.5)
-        +size-md(12)
+        +size-md(10)
+        +size-sm(12)
+        +md-block()
+            margin-bottom: 4.3125rem
+            .form-container
+                .form-body
+                    &__fields
+                        flex-direction: row
+                        flex-wrap: wrap
+                        align-items: flex-start
+                        justify-content: space-between
+                        input
+                            flex: 0 0 46%
+                        +sm-block()
+                            flex-direction: column
+                            flex-wrap: nowrap
+                            input
+                                flex: 0 0 100%

@@ -14,5 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setHeightSections();
+
+    window.addEventListener('resize', setHeightSections);
     
 })

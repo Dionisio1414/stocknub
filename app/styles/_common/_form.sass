@@ -75,7 +75,20 @@ input
     position: relative
     background: #fff
     border-radius: 7px
+    z-index: 2
     box-shadow: 0px 5px 25px rgba(0, 0, 0, .10)
+    &::before
+        content: ""
+        display: block
+        background-image: url(../images/static/form-icon-1.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        position: absolute
+        top: -49px
+        right: -51px
+        width: 140px
+        height: 140px
     .form
         &-body
             padding: 3.125rem 3.0375rem 2.8125rem 3.0375rem

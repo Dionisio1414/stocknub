@@ -1,5 +1,6 @@
 .course
     padding: 4.37rem 0 9.37rem 0
+    margin-bottom: 10rem
     &::before
         content: ""
         position: absolute
@@ -16,6 +17,9 @@
     &-form
         +col()
         +size(3)
+        .form-container
+            &::before
+                background-image: url(../images/static/form-icon-2.png)
     &-description
         +col()
         +size(9)
