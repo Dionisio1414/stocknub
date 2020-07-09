@@ -16,6 +16,12 @@ module.exports = function grid(done) {
             xs: {
                 width: "320px"
             },
+            small_mobile: {
+                width: "375px"
+            },
+            medium_mobile: {
+                width: "425px"
+            },
             sm: {
                 width: "576px"
             },

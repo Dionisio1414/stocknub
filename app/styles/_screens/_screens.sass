@@ -107,6 +107,8 @@
             background-position: right center     
         +xl-block()
             background-position: right top  
+        +md-block()
+            background-size: 100% 17%
         &::before
             content: ""
             position: absolute
@@ -258,7 +260,23 @@
                     +sm-block()
                         text-align: center
     &_third
+        background-image: url(../images/static/bg-particles-4.png)
+        background-size: 100% 80%
+        background-position: right top
+        background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
+        +small_desktop-block()
+            background-size: 100% 65%
+        +xl-block()
+            background-size: 100% 50%
+        +lg-block()
+            padding: 0 0 9.37rem 0
+            background-size: 100% 35%
+        +md-block()
+            background-size: 100% 23%
+        +sm-block()
+            padding: 0 0 10rem 0
+            background-image: none
         &::before
             content: ""
             position: absolute
@@ -272,6 +290,8 @@
             background-repeat: no-repeat
             background-position: bottom
             background-size: contain
+            +sm-block()
+                bottom: 0
         &::after
             content: ""
             position: absolute
@@ -284,15 +304,36 @@
             background-repeat: no-repeat
             background-size: contain
             background-position: center center
+            +lg-block()
+                top: 71%
         &__description
             +col()
             +size(7)
+            +size-large(8)
+            +size-small_desktop(9)
+            +size-lg(8)
+            +size-sm(12)
+            +shift-left(1)
+            +shift-lg-left(.5)
+            +shift-sm-left(0)
             .title
                 position: relative
                 font-family: $montserratBlack
                 font-size: 5rem
                 line-height: normal
                 margin-bottom: 1.375rem
+                +xl-block()
+                    font-size: 4.375rem
+                +lg-block()
+                    font-size: 3.75rem
+                    line-height: 3.75rem
+                +sm-block()
+                    font-size: 2.8125rem
+                    word-break: break-word
+                    line-height: 3.125rem
+                +small_mobile-block()
+                    font-size: 2.2125rem
+                    line-height: 2.125rem
                 &::before
                     content: attr(data-title)
                     position: absolute
@@ -300,22 +341,70 @@
                     right: -3rem
                     font-size: 12.5rem
                     color: rgba(145,145,160, .10)
+                    +xl-block()
+                        font-size: 11.125rem
+                    +lg-block()
+                        font-size: 9rem
+                        right: auto
+                        left: 5.5rem
+                        top: -2.5rem
+                    +md-block()
+                        left: 1rem
+                        font-size: 8rem
+                    +sm-block()
+                        font-size: 5.875rem
+                        left: 0
+                    +medium_mobile-block()
+                        font-size: 5rem
+                    +small_mobile-block()
+                        font-size: 4rem
+                        top: -1.5rem
                 span
                     color: set-color(accent)
+                    +lg-block()
+                        display: block
+                        white-space: nowrap
+                    +sm-block()
+                        white-space: normal
             ul
                 margin-bottom: 1.5625rem
+                +sm-block()
+                    padding-left: 0
+                li
+                    +xl-block()
+                        font-size: 1rem
+                    +sm-block()
+                        font-size: .8125rem
             p
                 &:first-of-type
                     font-family: $montserratSemiBold
                     font-size: 1.25rem
                     line-height: 1.875rem
                     margin-bottom: 1.0625rem
+                    +xl-block()
+                        font-size: 1.0625rem
+                    +sm-block()
+                        font-size: 1rem
+                        line-height: 1.5rem
                 &:last-of-type
                     font-family: $montserratMedium
                     font-size: .875rem
                     line-height: 1.5rem
+                    +xl-block()
+                        font-size: .75rem
     &_four
-        padding: 7.37rem 0 9.37rem 0
+        background-image: url(../images/static/bg-particles-5.png)
+        background-size: 15% 50%
+        background-position: right top
+        background-repeat: no-repeat
+        padding: 7.37rem 0 11.37rem 0
+        +small_desktop-block()
+            background-size: 15% 40%
+        +xl-block()
+            padding: 1.37rem 0 11.37rem 0
+            background-size: 15% 28%
+        +lg-block()
+            padding: 0 0 17.37rem 0
         &::before
             content: ""
             position: absolute
@@ -329,6 +418,9 @@
             background-repeat: no-repeat
             background-position: bottom
             background-size: contain
+            +sm-block()
+                width: 188vw
+                left: -116px
         &::after
             content: ""
             position: absolute
@@ -344,28 +436,64 @@
         &__description
             +col()
             +size(7)
+            +size-xl(8)
+            +size-lg(9)
+            +size-md(11)
+            +size-sm(12)
+            +shift-right(.6)
+            +shift-small_desktop-right(.8)
+            +shift-xl-right(.65)
+            +shift-sm-right(0)
             margin-left: auto
             .title
                 font-family: $montserratBlack
                 font-size: 5.625rem
                 color: set-color(accent)
+                +xl-block()
+                    font-size: 5rem
+                +lg-block()
+                    font-size: 4.375rem
+                +sm-block()
+                    font-size: 3rem
+                +small_mobile-block()
+                    font-size: 2.5rem
             .decoration-desc
                 margin-left: 3.25rem
                 margin-bottom: 1.4375rem
+                +sm-block()
+                    margin-left: 0
+                    margin-bottom: 6.375rem
                 strong
                     font-family: $montserratBold
                     line-height: 1.625rem
                     border-bottom: 2px solid set-color(decoration-color)
+                    +xl-block()
+                        font-size: .8125rem
+                        line-height: 1.3125rem
             p
                 &:first-of-type
                     font-family: $montserratBold
                     font-size: 1.625rem
                     line-height: 1
                     margin-bottom: 2.3125rem
+                    +xl-block()
+                        font-size: 1.4375rem
+                        margin-bottom: 1.3125rem
+                    +lg-block()
+                        font-size: 1.3125rem
+                    +sm-block()
+                        font-size: 1.125rem
                 &:last-of-type
                     font-family: $montserratMedium
                     font-size: .875rem
                     line-height: 1.5rem
+                    +xl-block()
+                        font-size: .8125rem
+                    +sm-block()
+                        text-align: right
+                        padding-left: 11rem
+                    +small_mobile-block()
+                        padding-left: 8rem
     &_five
         padding: 9.37rem 0 9.37rem 0
         &::before
@@ -396,6 +524,10 @@
         &__description
             +col()
             +size(5.65)
+            +size-large(6.5)
+            +shift-left(1.2)
+            +shift-large-left(1.5)
+            +shift-right(2)
             .title
                 font-family: $montserratBlack
                 font-size: 4.375rem

@@ -9,6 +9,8 @@ $break_lg: 992px
 $break_small_laptop: 970px
 $break_md: 768px
 $break_sm: 576px
+$break_medium_mobile: 425px
+$break_small_mobile: 375px
 $break_xs: 320px
 
 $offset: 60px
@@ -20,6 +22,8 @@ $offset_lg: $offset
 $offset_small_laptop: $offset
 $offset_md: $offset
 $offset_sm: $offset
+$offset_medium_mobile: $offset
+$offset_small_mobile: $offset
 $offset_xs: $offset
 
 $offset_one_side: ($offset / 2)
@@ -31,6 +35,8 @@ $offset_lg_one_side: ($offset_lg / 2)
 $offset_small_laptop_one_side: ($offset_small_laptop / 2)
 $offset_md_one_side: ($offset_md / 2)
 $offset_sm_one_side: ($offset_sm / 2)
+$offset_medium_mobile_one_side: ($offset_medium_mobile / 2)
+$offset_small_mobile_one_side: ($offset_small_mobile / 2)
 $offset_xs_one_side: ($offset_xs / 2)
 
 $fields: 15px
@@ -115,6 +121,14 @@ $fields: 15px
 =size-sm($n)
     $val: #{calc(100% / #{$columns} * #{$n} - #{$offset_sm})}
     +sm(width, $val)
+
+=size-medium_mobile($n)
+    $val: #{calc(100% / #{$columns} * #{$n} - #{$offset_medium_mobile})}
+    +medium_mobile(width, $val)
+
+=size-small_mobile($n)
+    $val: #{calc(100% / #{$columns} * #{$n} - #{$offset_small_mobile})}
+    +small_mobile(width, $val)
 
 =size-xs($n)
     $val: #{calc(100% / #{$columns} * #{$n} - #{$offset_xs})}
@@ -354,6 +368,58 @@ $fields: 15px
     $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_sm_one_side})}
     +sm(padding-right, $val)
 
+=shift-medium_mobile($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(margin-left, $val)
+    +medium_mobile(margin-right, $val)
+
+=shift-medium_mobile-left($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(margin-left, $val)
+
+=shift-medium_mobile-right($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(margin-right, $val)
+
+=shift-medium_mobile-padding($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(padding-left, $val)
+    +medium_mobile(padding-right, $val)
+
+=shift-medium_mobile-padding-left($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(padding-left, $val)
+
+=shift-medium_mobile-padding-right($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_medium_mobile_one_side})}
+    +medium_mobile(padding-right, $val)
+
+=shift-small_mobile($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(margin-left, $val)
+    +small_mobile(margin-right, $val)
+
+=shift-small_mobile-left($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(margin-left, $val)
+
+=shift-small_mobile-right($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(margin-right, $val)
+
+=shift-small_mobile-padding($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(padding-left, $val)
+    +small_mobile(padding-right, $val)
+
+=shift-small_mobile-padding-left($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(padding-left, $val)
+
+=shift-small_mobile-padding-right($n)
+    $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_small_mobile_one_side})}
+    +small_mobile(padding-right, $val)
+
 =shift-xs($n)
     $val: #{calc(100% / #{$columns} * #{$n} + #{$offset_xs_one_side})}
     +xs(margin-left, $val)
@@ -442,6 +508,22 @@ $fields: 15px
 
 =sm-block()
     @media screen and (max-width: $break_sm)
+        @content
+
+=medium_mobile($name, $value)
+    @media screen and (max-width: $break_medium_mobile)
+        #{$name}: $value
+
+=medium_mobile-block()
+    @media screen and (max-width: $break_medium_mobile)
+        @content
+
+=small_mobile($name, $value)
+    @media screen and (max-width: $break_small_mobile)
+        #{$name}: $value
+
+=small_mobile-block()
+    @media screen and (max-width: $break_small_mobile)
         @content
 
 =xs($name, $value)
