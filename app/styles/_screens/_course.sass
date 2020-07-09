@@ -1,6 +1,38 @@
 .course
-    padding: 4.37rem 0 9.37rem 0
-    margin-bottom: 10rem
+    background-image: url(../images/static/bg-particles-8.png)
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: 53% 70%
+    padding: 4.37rem 0 12.37rem 0
+    overflow: hidden
+    +large-block()
+        background-size: 53% 55%
+    +xl-block()
+        padding: 0 0 5.37rem 0
+        background-size: 53% 45%
+    &::after
+        content: ""
+        position: absolute
+        left: -20rem
+        top: 0
+        width: 59.792vw
+        height: 59.792vw
+        z-index: -1
+        background-image: url(../images/svg/large-home-polygon.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        +large-block()
+            left: -28rem
+            width: 68.792vw
+            height: 68.792vw
+        +small_desktop-block()
+            width: 76.792vw
+            height: 76.792vw
+        +xl-block()
+            width: 114.792vw
+            height: 114.792vw
+            left: -25rem
     &::before
         content: ""
         position: absolute
@@ -17,17 +49,29 @@
     &-form
         +col()
         +size(3)
+        +size-medium_desktop(4)
+        +size-lg(5)
+        +size-md(7.5)
         .form-container
             &::before
                 background-image: url(../images/static/form-icon-2.png)
+        +xl-block()
+            margin-top: 8rem
     &-description
         +col()
         +size(9)
+        +size-medium_desktop(8)
+        +size-lg(7)
         .title
             font-family: $montserratBold
             font-size: 2.1875rem
             line-height: normal
             margin-bottom: 1.625rem
+            +xl-block()
+                margin-left: -15rem
+                span
+                    font-size: 2.5125rem
+                    padding-left: 6rem
             span
                 display: block
                 font-family: $montserratBlack
