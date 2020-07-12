@@ -12,10 +12,10 @@
 
 input, textarea
 	outline: none
-	//&:focus:required:invalid
-		//border-color: red
-	//&:required:valid
-		//border-color: green
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
 
 html,
 body
@@ -83,3 +83,60 @@ h1, h2, h3, h4, h5, h6
 
 .section
   position: relative
+
+.notification_ok
+  font-family: $montserratSemiBold
+  font-size: 24px
+  text-align: center
+  background-color: #fff
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 15
+  max-width: 50%
+  padding: 2.5em
+  border-radius: 7px
+  box-shadow: 0 5px 25px rgba(0,0,0,.1)
+  border: 3px solid set-color(accent)
+  width: 100%
+  +lg-block()
+    max-width: 80%
+  +md-block()
+    max-width: 95%
+    padding: 2.5em 1.5em
+  +sm-block()
+    font-size: 18px
+  .close-notification
+    position: absolute
+    top: 20px
+    right: 15px
+    width: 20px
+    height: 20px
+    cursor: pointer
+    span
+      display: block
+      position: absolute
+      top: 0
+      width: 100%
+      height: 3px
+      background-color: set-color(accent)
+      &:first-child
+        transform: rotate(-45deg)
+        top: 8px
+      &:last-child
+        transform: rotate(45deg)
+        top: 8px
+    
+
+.notification_overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, .25)
+  width: 100%
+  height: 100%
+  z-index: 10
+  display: none

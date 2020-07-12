@@ -7,9 +7,20 @@
     overflow: hidden
     +large-block()
         background-size: 53% 55%
+    +small_desktop-block()
+        background-size: 53% 50%
     +xl-block()
         padding: 0 0 5.37rem 0
         background-size: 53% 45%
+    +lg-block()
+        background-size: 60% 42%
+    +md-block()
+        background-size: 100% 50%
+        padding-bottom: 21.37rem
+    +sm-block()
+        padding-bottom: 34.37rem
+        background-image: none
+        margin-bottom: 2rem
     &::after
         content: ""
         position: absolute
@@ -32,7 +43,14 @@
         +xl-block()
             width: 114.792vw
             height: 114.792vw
-            left: -25rem
+            left: -35rem
+        +sm-block()
+            top: auto
+            left: -26rem
+        +medium_mobile-block()
+            left: -19rem
+        +small_mobile-block()
+            left: -17rem
     &::before
         content: ""
         position: absolute
@@ -46,22 +64,35 @@
         background-repeat: no-repeat
         background-position: bottom
         background-size: contain
+        +sm-block()
+            width: 200vw
+            left: -26rem
+            bottom: 0
+        +medium_mobile-block()
+            left: -20rem
     &-form
         +col()
         +size(3)
         +size-medium_desktop(4)
         +size-lg(5)
-        +size-md(7.5)
+        +size-md(12)
+        +md-block()
+            order: 2
         .form-container
             &::before
                 background-image: url(../images/static/form-icon-2.png)
         +xl-block()
             margin-top: 8rem
+        +md-block()
+            margin-top: 2rem
     &-description
         +col()
         +size(9)
         +size-medium_desktop(8)
         +size-lg(7)
+        +size-md(12)
+        +md-block()
+            order: 1
         .title
             font-family: $montserratBold
             font-size: 2.1875rem
@@ -72,18 +103,44 @@
                 span
                     font-size: 2.5125rem
                     padding-left: 6rem
+            +md-block()
+                margin-left: 0
+            +sm-block()
+                text-align: center
+                font-size: 1.625rem
             span
                 display: block
                 font-family: $montserratBlack
                 font-size: 2.8125rem
                 color: set-color(accent)
+                +md-block()
+                    padding-left: 3rem
+                +sm-block()
+                    padding-left: 0
+                    font-size: 2.0625rem
         p
             font-family: $montserratBold
             font-size: 1.5625rem
             padding-left: 2.1875rem
             line-height: normal
+            +md-block()
+                padding-left: 0
+            +sm-block()
+                text-align: center
+                font-size: 1.3125rem
             span
                 display: block
                 font-family: $montserratBlack
                 font-size: 1.875rem
                 color: set-color(accent)
+                +md-block()
+                    padding-left: 2rem
+                +sm-block()
+                    padding-left: 0
+                    font-size: 1.625rem
+            +sm-block()
+                &:first-of-type
+                    text-align: center
+                    font-family: $montserratMedium
+                    font-size: .9375rem
+                    margin-bottom: 2.8125rem

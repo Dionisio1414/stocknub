@@ -9,7 +9,7 @@ const rename = require('gulp-rename')
 const sourcemaps = require('gulp-sourcemaps')
 
 module.exports = function script() {
-  return gulp.src('app/js/main.js')
+  return gulp.src(['node_modules/fslightbox/index.js', 'app/js/main.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(babel({

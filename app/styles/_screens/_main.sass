@@ -11,9 +11,11 @@
         background-position: -34px -47px
     +sm-block()
         padding-top: 2.5em
-        padding-bottom: 17em
+        padding-bottom: 27em
         background-size: 100%
         background-position: center
+    +small_mobile-block()
+        padding-bottom: 19em
     &::before
         content: ""
         position: absolute
@@ -27,6 +29,10 @@
         background-repeat: no-repeat
         background-position: bottom
         background-size: contain
+        +sm-block()
+            width: 200vw
+        +small_mobile-block()
+            width: 190vw
     &::after
         content: ""
         position: absolute
@@ -173,3 +179,5 @@
                             flex-wrap: nowrap
                             input
                                 flex: 0 0 100%
+        +sm-block()
+            margin-bottom: 3.3125rem
