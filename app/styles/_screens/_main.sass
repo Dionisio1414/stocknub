@@ -1,11 +1,22 @@
 .home
-    background-image: url(../images/static/bg-particles-1.png)
+    // background-image: url(../images/static/bg-particles-1.png)
     // background-attachment: fixed
     background-size: contain
     background-position: -50px -90px
     background-repeat: no-repeat
     padding-top: 11.5em
     padding-bottom: 7em
+    .parallax-container
+        &__item
+            &:first-child
+                bottom: 90px
+                left: -45px
+            &:nth-child(2)
+                top: 12%
+                left: 42%
+            &:last-child
+                top: -77px
+                left: 55% 
     +xl-block()
         background-size: 80%
         background-position: -34px -47px

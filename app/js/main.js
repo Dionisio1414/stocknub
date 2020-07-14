@@ -13,8 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
             screenFirstRow.prepend(homeFormClone)
         }
     }
+    const parralaxs = document.querySelectorAll('.rellax');
 
-    console.log(feedbackForms);
+    // let rellax = new Rellax('.rellax', {
+    //     speed: 3,
+    //     center: false,
+    //     vertical: true,
+    //     horizontal: false,
+    //     callback: function(pos) {
+    //         console.log(pos)
+    //     }
+    // });
+
+    // setTimeout(() => new simpleParallax(parralaxs, {
+    //     overflow: true
+    // }), 700)
 
     if(window.innerWidth < 577) {
         document.querySelector('.course-description').prepend(screenSixParagraph);

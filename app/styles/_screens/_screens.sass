@@ -1,11 +1,22 @@
 .screen
     &_first
-        background-image: url(../images/static/bg-particles-2.png)
+        // background-image: url(../images/static/bg-particles-2.png)
         background-size: 50% 70%
         background-position: right top
         background-repeat: no-repeat
         padding: 9.37rem 0 15.37rem 0
         margin-bottom: 3.375rem
+        .parallax-container
+            &__item
+                &:first-child
+                    bottom: 15%
+                    right: 5%
+                &:nth-child(2)
+                    top: 0%
+                    left: 71%
+                &:last-child
+                    top: 3%
+                    left: 42%
         +large-block()
             background-size: 50% 60%
         +medium_desktop-block()
