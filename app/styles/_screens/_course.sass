@@ -1,10 +1,21 @@
 .course
-    background-image: url(../images/static/bg-particles-8.png)
-    background-repeat: no-repeat
-    background-position: right top
-    background-size: 53% 70%
+    // background-image: url(../images/static/bg-particles-8.png)
+    // background-repeat: no-repeat
+    // background-position: right top
+    // background-size: 53% 70%
     padding: 4.37rem 0 12.37rem 0
     overflow: hidden
+    .parallax-container
+        &__item
+            &:first-child
+                bottom: 15%
+                right: 5%
+            &:nth-child(2)
+                top: 5%
+                right: 4%
+            &:last-child
+                bottom: 40%
+                right: 50%
     +large-block()
         background-size: 53% 55%
     +small_desktop-block()

@@ -1,9 +1,9 @@
 .screen
     &_first
         // background-image: url(../images/static/bg-particles-2.png)
-        background-size: 50% 70%
-        background-position: right top
-        background-repeat: no-repeat
+        // background-size: 50% 70%
+        // background-position: right top
+        // background-repeat: no-repeat
         padding: 9.37rem 0 15.37rem 0
         margin-bottom: 3.375rem
         .parallax-container
@@ -122,11 +122,22 @@
                     +sm-block()
                         font-size: 1.75rem
     &_second
-        background-image: url(../images/static/bg-particles-3.png)
-        background-size: 100% 45%
-        background-position: right top
-        background-repeat: no-repeat
+        // background-image: url(../images/static/bg-particles-3.png)
+        // background-size: 100% 45%
+        // background-position: right top
+        // background-repeat: no-repeat
         padding: 0 0 17.37rem 0
+        .parallax-container
+            &__item
+                &:first-child
+                    top: 30%
+                    left: 3%
+                &:nth-child(2)
+                    top: 25%
+                    left: 25%
+                &:last-child
+                    top: 3%
+                    right: 15%
         +large-block()
             background-size: 100% 37%
         +small_desktop-block()
@@ -302,11 +313,22 @@
                     +sm-block()
                         text-align: center
     &_third
-        background-image: url(../images/static/bg-particles-4.png)
-        background-size: 100% 80%
-        background-position: right top
-        background-repeat: no-repeat
+        // background-image: url(../images/static/bg-particles-4.png)
+        // background-size: 100% 80%
+        // background-position: right top
+        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
+        .parallax-container
+            &__item
+                &:first-child
+                    top: 15%
+                    left: 3%
+                &:nth-child(2)
+                    top: 1%
+                    right: 25%
+                &:last-child
+                    bottom: 15%
+                    right: -1.5%
         +large-block()
             background-size: 100% 75%
         +small_desktop-block()
@@ -453,11 +475,19 @@
                         padding-right: 8rem
                         top: calc(100% + 6rem)
     &_four
-        background-image: url(../images/static/bg-particles-5.png)
-        background-size: 15% 50%
-        background-position: right top
-        background-repeat: no-repeat
+        // background-image: url(../images/static/bg-particles-5.png)
+        // background-size: 15% 50%
+        // background-position: right top
+        // background-repeat: no-repeat
         padding: 7.37rem 0 11.37rem 0
+        .parallax-container
+            &__item
+                &:first-child
+                    top: 0%
+                    right: 20%
+                &:last-child
+                    bottom: 25%
+                    right: 6%
         +medium_desktop-block()
             background-size: 15% 44%
         +small_desktop-block()
@@ -575,11 +605,22 @@
                         position: absolute
                         top: 100%
     &_five
-        background-image: url(../images/static/bg-particles-6.png)
-        background-size: 50% 60%
-        background-position: left top
-        background-repeat: no-repeat
+        // background-image: url(../images/static/bg-particles-6.png)
+        // background-size: 50% 60%
+        // background-position: left top
+        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
+        .parallax-container
+            &__item
+                &:first-child
+                    top: 3%
+                    left: 5%
+                &:nth-child(2)
+                    top: 0%
+                    left: 35%
+                &:last-child
+                    top: 43%
+                    left: 12%
         +large-block()
             background-size: 50% 50%
         +small_desktop-block()
@@ -706,11 +747,22 @@
                         +xl-block()
                             font-size: 1.625rem
     &_six
-        background-image: url(../images/static/bg-particles-7.png)
-        background-size: 30% 60%
-        background-position: right top
-        background-repeat: no-repeat
+        // background-image: url(../images/static/bg-particles-7.png)
+        // background-size: 30% 60%
+        // background-position: right top
+        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
+        .parallax-container
+            &__item
+                &:first-child
+                    bottom: 15%
+                    right: -3%
+                &:nth-child(2)
+                    top: 0%
+                    right: 35%
+                &:last-child
+                    bottom: 8%
+                    right: 25%
         +small_desktop-block()
             background-size: 30% 45%
         +xl-block()
