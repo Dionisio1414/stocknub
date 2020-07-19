@@ -31,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setHeightSections();
     }, 200);
 
-    new Rellax('.rellax', {
-        horizontal: false,
-        vertical: true,
-        center: true,
-        round: true
-    });
+    if(window.innerWidth > 576) {
+        new Rellax('.rellax', {
+            horizontal: false,
+            vertical: true,
+            center: true,
+            round: true
+        });
+    }
 
     let result;
 

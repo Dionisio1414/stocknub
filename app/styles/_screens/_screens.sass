@@ -1,9 +1,5 @@
 .screen
     &_first
-        // background-image: url(../images/static/bg-particles-2.png)
-        // background-size: 50% 70%
-        // background-position: right top
-        // background-repeat: no-repeat
         padding: 9.37rem 0 15.37rem 0
         margin-bottom: 3.375rem
         .parallax-container
@@ -11,12 +7,30 @@
                 &:first-child
                     bottom: 15%
                     right: 5%
+                    +xl-block()
+                        bottom: auto
+                        right: 28%
+                        top: 23%
+                    +md-block()
+                        top: 0
+                        right: 0
                 &:nth-child(2)
                     top: 0%
                     left: 71%
+                    +xl-block()
+                        right: 0
+                        left: auto
+                        top: 10%
+                    +md-block()
+                        display: none
                 &:last-child
                     top: 3%
                     left: 42%
+                    +xl-block()
+                        top: 0
+                        left: 10%
+                    +md-block()
+                        left: 0
         +large-block()
             background-size: 50% 60%
         +medium_desktop-block()
@@ -73,6 +87,11 @@
             background-size: contain
             background-position: center center
             pointer-events: none
+            +md-block()
+                left: -32%
+                top: 50%
+                transform: translateY(-50%)
+                z-index: -1
         &__description
             +col()
             +size(6)
@@ -122,22 +141,35 @@
                     +sm-block()
                         font-size: 1.75rem
     &_second
-        // background-image: url(../images/static/bg-particles-3.png)
-        // background-size: 100% 45%
-        // background-position: right top
-        // background-repeat: no-repeat
         padding: 0 0 17.37rem 0
         .parallax-container
             &__item
+                +sm-block()
                 &:first-child
                     top: 30%
                     left: 3%
+                    +xl-block()
+                        left: -15%
+                    +lg-block()
+                        left: -20%
+                    +md-block()
+                        left: -25%
                 &:nth-child(2)
                     top: 25%
                     left: 25%
+                    +xl-block()
+                        top: 12%
+                        left: 5%
+                    +md-block()
+                        top: 13%
+                        left: -7%
                 &:last-child
                     top: 3%
                     right: 15%
+                    +xl-block()
+                        right: 4%
+                    +lg-block()
+                        right: -7%
         +large-block()
             background-size: 100% 37%
         +small_desktop-block()
@@ -188,6 +220,9 @@
                 right: -28%
             +xl-block()
                 right: -32%
+            +lg-block()
+                top: 50%
+                transform: translateY(-50%)
             +sm-block()
                 top: 50%
                 transform: translateY(-50%)
@@ -313,22 +348,25 @@
                     +sm-block()
                         text-align: center
     &_third
-        // background-image: url(../images/static/bg-particles-4.png)
-        // background-size: 100% 80%
-        // background-position: right top
-        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
         .parallax-container
             &__item
                 &:first-child
                     top: 15%
                     left: 3%
+                    +xl-block()
+                        display: none
                 &:nth-child(2)
                     top: 1%
                     right: 25%
+                    +xl-block()
+                        top: 0
+                        right: 0
                 &:last-child
                     bottom: 15%
                     right: -1.5%
+                    +xl-block()
+                        display: none
         +large-block()
             background-size: 100% 75%
         +small_desktop-block()
@@ -475,19 +513,31 @@
                         padding-right: 8rem
                         top: calc(100% + 6rem)
     &_four
-        // background-image: url(../images/static/bg-particles-5.png)
-        // background-size: 15% 50%
-        // background-position: right top
-        // background-repeat: no-repeat
         padding: 7.37rem 0 11.37rem 0
         .parallax-container
             &__item
                 &:first-child
                     top: 0%
                     right: 20%
+                    +xl-block()
+                        top: 0
+                        right: 0
+                    +md-block()
+                        right: auto
+                        left: -8%
+                    +sm-block()
+                        display: none
                 &:last-child
                     bottom: 25%
                     right: 6%
+                    +xl-block()
+                        bottom: 31%
+                        right: 0
+                    +md-block()
+                        right: -13%
+                        bottom: auto
+                    +sm-block()
+                        max-width: 30%
         +medium_desktop-block()
             background-size: 15% 44%
         +small_desktop-block()
@@ -605,22 +655,28 @@
                         position: absolute
                         top: 100%
     &_five
-        // background-image: url(../images/static/bg-particles-6.png)
-        // background-size: 50% 60%
-        // background-position: left top
-        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
         .parallax-container
             &__item
                 &:first-child
                     top: 3%
                     left: 5%
+                    +lg-block()
+                        display: none
                 &:nth-child(2)
                     top: 0%
                     left: 35%
+                    +lg-block()
+                        top: -15%
+                    +sm-block()
+                        bottom: 30%
+                        top: auto
+                        left: 0
                 &:last-child
                     top: 43%
                     left: 12%
+                    +lg-block()
+                        display: none
         +large-block()
             background-size: 50% 50%
         +small_desktop-block()
@@ -747,22 +803,34 @@
                         +xl-block()
                             font-size: 1.625rem
     &_six
-        // background-image: url(../images/static/bg-particles-7.png)
-        // background-size: 30% 60%
-        // background-position: right top
-        // background-repeat: no-repeat
         padding: 9.37rem 0 9.37rem 0
         .parallax-container
             &__item
                 &:first-child
                     bottom: 15%
                     right: -3%
+                    +xl-block()
+                        bottom: 50%
+                        right: -11%
+                    +lg-block()
+                        right: -16%
+                    +sm-block()
+                        display: none
                 &:nth-child(2)
                     top: 0%
                     right: 35%
+                    +xl-block()
+                        right: 20%
+                    +lg-block()
+                        right: auto
+                        left: 8%
+                    +sm-block()
+                        display: none
                 &:last-child
                     bottom: 8%
                     right: 25%
+                    +xl-block()
+                        display: none
         +small_desktop-block()
             background-size: 30% 45%
         +xl-block()
